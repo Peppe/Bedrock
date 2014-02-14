@@ -3,4 +3,4 @@
 .classpath
 .project
 .settings/
-src\main\webapp\VAADIN\widgetsets
+src/main/webapp/VAADIN/widgetsets

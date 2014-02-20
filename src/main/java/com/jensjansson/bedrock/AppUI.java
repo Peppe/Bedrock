@@ -2,6 +2,9 @@ package com.jensjansson.bedrock;
 
 import javax.servlet.annotation.WebServlet;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.config.IniSecurityManagerFactory;
+import org.apache.shiro.util.Factory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,6 +28,12 @@ public class AppUI extends UI {
 
 	@Override
 	protected void init(VaadinRequest request) {
+		Factory<org.apache.shiro.mgt.SecurityManager> factory = new IniSecurityManagerFactory(
+				"classpath:shiro.ini");
+		org.apache.shiro.mgt.SecurityManager securityManager = factory
+				.getInstance();
+//		SecurityUtils.setSecurityManager(securityManager);
+//		Subject currentUser = SecurityUtils.getSubject();
 		setContent(new MainLayout(this));
 		log.warn("UI inited");
 	}

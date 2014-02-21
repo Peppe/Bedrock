@@ -21,11 +21,6 @@ public class AppUI extends UI {
 	private static final transient Logger log = LoggerFactory
 			.getLogger(AppUI.class);
 
-	@WebServlet(value = "/*", asyncSupported = true)
-	@VaadinServletConfiguration(productionMode = false, ui = AppUI.class, widgetset = "com.jensjansson.bedrock.AppWidgetSet")
-	public static class Servlet extends VaadinServlet {
-	}
-
 	@Override
 	protected void init(VaadinRequest request) {
 		Factory<org.apache.shiro.mgt.SecurityManager> factory = new IniSecurityManagerFactory(

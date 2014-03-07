@@ -20,7 +20,6 @@ public class ForwardFilter implements Filter {
 		HttpServletRequest req = (HttpServletRequest) request;
 		String path = req.getRequestURI().substring(
 				req.getContextPath().length());
-		System.out.println("path: " + path);
 		if (path.startsWith("/login.jsp")) {
 			chain.doFilter(request, response); // Goes to default servlet.
 		} else if (path.startsWith("/VAADIN/")) {

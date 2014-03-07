@@ -5,7 +5,7 @@
         This file is automatically updated based on new dependencies by the
         goal "vaadin:update-widgetset".
     -->
-
+	<collapse-all-properties/>
     <!-- Inherit DefaultWidgetSet -->
     <inherits name="com.vaadin.DefaultWidgetSet" /> 
 

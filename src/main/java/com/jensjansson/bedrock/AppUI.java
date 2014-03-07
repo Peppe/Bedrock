@@ -23,12 +23,6 @@ public class AppUI extends UI {
 
 	@Override
 	protected void init(VaadinRequest request) {
-		Factory<org.apache.shiro.mgt.SecurityManager> factory = new IniSecurityManagerFactory(
-				"classpath:shiro.ini");
-		org.apache.shiro.mgt.SecurityManager securityManager = factory
-				.getInstance();
-//		SecurityUtils.setSecurityManager(securityManager);
-//		Subject currentUser = SecurityUtils.getSubject();
 		setContent(new MainLayout(this));
 		log.warn("UI inited");
 	}
